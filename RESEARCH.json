@@ -1,0 +1,102 @@
+{
+  "idea": {
+    "name": "DeskDeflect",
+    "fingerprint": "async-admin-task-delegation-inbox-knowledge-worker-focus",
+    "pitch": "Async inbox that handles admin tasks so developers never break deep work.",
+    "cluster": "Context switching & admin interruption for knowledge workers",
+    "target_customer": "Software developers and knowledge workers who lose focus managing appointment scheduling, expense submissions, vendor emails, and other admin tasks that interrupt coding or deep work sessions",
+    "core_features": [
+      "Unified async inbox: forward any admin email/task here instead of handling it live",
+      "AI agent classifies, drafts responses, and flags only items requiring a real decision",
+      "Calendar scheduling handled automatically via natural language rules ('never before 10am, no back-to-backs')",
+      "Daily digest: 5-minute review of what was handled and what needs a yes/no",
+      "Integrations: Gmail, Outlook, Calendly-style scheduling, Slack"
+    ],
+    "pricing_model": "Monthly subscription per seat",
+    "price_point": "$19/month individual \u00b7 $49/month team of 3",
+    "gtm_channel": "Hacker News Show HN launch, r/productivity, developer Twitter/X \u2014 lead with the framing 'your admin EA, not another todo app'",
+    "competitive_landscape": "Superhuman (email speed, not delegation), Reclaim.ai (calendar only), Clara (human-assisted, expensive). No async AI delegation inbox specifically for developer/knowledge worker admin overhead at this price point.",
+    "unfair_advantage": "Framing as 'admin firewall' rather than productivity app \u2014 it removes tasks from your plate entirely rather than organizing them. Developers are vocal about this pain and share tools virally.",
+    "mvp_estimate": "Next.js + Supabase + OpenAI + Gmail API + Google Calendar API; 3.5 weeks solo dev for inbox routing, AI classification, and digest generation",
+    "agentic_automation": "Incoming emails classified and draft-responded by an LLM agent on arrival \u2014 no human triage. Scheduling requests resolved automatically against calendar rules with no back-and-forth. Daily digest compiled and emailed by a 7pm cron job. Stripe handles billing. Support handled by AI chat. The only human touchpoint is the daily 5-minute digest review, which is the product's core value proposition, not overhead. Estimated owner time: 1 hour/week.",
+    "origin_story": "A Hacker News thread on AI life management surfaces a comment that crystallizes the pain perfectly: 'I'd pay for something to deal with that' \u2014 referring specifically to the mental overhead of managing appointments, vendor emails, and admin tasks while trying to code. The commenter describes context switching as the real productivity killer, not the tasks themselves. Existing tools like Superhuman make email faster but don't remove it; Reclaim handles calendar but not the inbox. The gap is a product that acts as a filter, not an organizer.",
+    "automation_playbook": "Gmail/Outlook webhook pushes every incoming email to the classification pipeline instantly. OpenAI GPT-4o categorizes as 'auto-handle,' 'draft-and-confirm,' or 'escalate.' Auto-handle items (spam, newsletters, vendor acknowledgments) are responded to and archived with no human touch. Draft-and-confirm items queue for the daily digest. Calendar invites resolved against stored scheduling rules via Google Calendar API. Stripe manages subscriptions with zero manual billing. AI support agent handles onboarding questions. Owner time: ~1 hour/week reviewing edge-case escalations.",
+    "maintenance_hours_per_week": 1,
+    "keywords": [
+      "admin task automation developer",
+      "deep work focus tool",
+      "async inbox AI assistant"
+    ],
+    "supporting_urls": [
+      "https://news.ycombinator.com/item?id=48885443"
+    ],
+    "weighted_total": 102,
+    "checklist": {
+      "ten_plus_posts_same_pain": true,
+      "paying_for_inferior_solution": false,
+      "reachable_channel": true,
+      "mvp_under_4_weeks": true,
+      "price_point_high_enough": true,
+      "hair_on_fire": true,
+      "can_presell": true,
+      "fewer_than_3_competitors": true,
+      "low_maintenance_ops": true
+    },
+    "checklist_passed": 8,
+    "momentum": "unknown",
+    "rising_queries": [],
+    "gate_result": "passed"
+  },
+  "pain_points": [
+    {
+      "problem": "Small businesses spend countless daily hours manually transferring information from forms or emails into spreadsheets, sending repetitive WhatsApp messages, following up on invoices, compiling reports from multiple sources, and losing track of leads.",
+      "persona": "Small business owners in India",
+      "current_workaround": "Manual data entry, spreadsheets, repetitive messaging, disorganized lead management",
+      "frequency": "daily",
+      "wtp_signal": "Already paying \u20b95,000-\u20b930,000 one-time for automation solutions",
+      "url": "https://www.reddit.com/r/indianstartups/comments/1u775qs/i_save_small_businesses_20_hoursweek_with_simple/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "US business owners are overwhelmed with paperwork, tracking unpaid invoices, and spending countless hours on repetitive tasks that drain motivation.",
+      "persona": "US small business owners",
+      "current_workaround": "Manual paperwork handling, manual invoice tracking, repetitive task execution",
+      "frequency": "daily",
+      "wtp_signal": "Implied willingness to adopt tools that solve genuine challenges",
+      "url": "https://www.reddit.com/r/SampleSize/comments/1uir9j4/casual_quick_question_for_us_business_ownerswhats/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Content creators and AI workflow users waste time manually copying AI responses, pasting them into the next prompt, and repeating this process across multiple steps instead of having responses automatically transfer between sequential prompts.",
+      "persona": "Content creators, prompt engineers, knowledge workers using AI tools",
+      "current_workaround": "Manual copy-paste between prompts, reviewing and modifying outputs manually between steps",
+      "frequency": "daily",
+      "wtp_signal": "Built a Chrome extension (Workflowly) to solve this, indicating significant time investment",
+      "url": "https://www.reddit.com/r/PromptEngineering/comments/1ukffkj/a_simple_ai_workflow_thats_saving_me_a_lot_of/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "QuickBooks users are frustrated by constant feature bloat, software lag, persistent bugs, and forced payment for features they don't use when they only need basic invoicing functionality.",
+      "persona": "Small business owners, freelancers using QuickBooks for invoicing",
+      "current_workaround": "Continue using QuickBooks despite frustration, or search for alternative accounting software",
+      "frequency": "daily",
+      "wtp_signal": "Currently paying for QuickBooks subscription",
+      "url": "https://www.reddit.com/r/QuickBooks/comments/1upx7n5/where_are_people_moving_to_qb_is_driving_me/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Knowledge workers struggle with context switching and mental overhead from managing multiple tasks like coding, emails, and administrative appointments, losing focus on primary work.",
+      "persona": "Software developers, knowledge workers",
+      "current_workaround": "Manual task management, context switching between work and personal tasks",
+      "frequency": "daily",
+      "wtp_signal": "Explicit statement 'I'd pay for something to deal with that'",
+      "url": "https://news.ycombinator.com/item?id=48885443",
+      "engagement": 0,
+      "source": "hackernews"
+    }
+  ]
+}
